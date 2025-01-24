@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #22254b;
-  --secondary-color: #373b69;
+  --secondary-color:#1a1a1a;
 }
 
 * {
@@ -10,7 +10,8 @@
 }
 
 body {
-  background-color: var(--primary-color);
+  background-color: black;
+  color:white;
   font-family: 'Poppins', sans-serif;
   margin: 0;
 }
@@ -95,7 +96,8 @@ main {
 }
 
 .overview {
-  background-color: #fff;
+  background-color:white;
+  color: black;
   padding: 2rem;
   position: absolute;
   left: 0;
@@ -109,4 +111,28 @@ main {
 
 .movie:hover .overview {
   transform: translateY(0);
+}
+
+
+.dark-hover .movie {
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.dark-hover .movie:hover {
+    transform: scale(1.08); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow effect */
+}
+
+/* Add hover styles for light mode */
+.movie:hover {
+    transform: scale(1.03); /* Slightly enlarge on hover for light mode */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Regular shadow effect */
+}
+.colorChangeBtn {
+    padding: 10px 20px;  
+    font-size: 16px;  
+    background-color: #333;  
+    color: #fff;  
+    border: none;  
+    cursor: pointer;
 }
